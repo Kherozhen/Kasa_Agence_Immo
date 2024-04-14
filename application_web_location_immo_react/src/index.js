@@ -2,10 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './index.css';
+//import './Sass/home.css';
+//import './Sass/about.css';
 import reportWebVitals from './reportWebVitals';
 
 import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
+import Logement from './Pages/Home/Logement';
 
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
@@ -19,6 +22,7 @@ root.render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/a-propos" element={<About />} />
+        <Route path="/locationCard" element={<Logement />} />
       </Routes>
       <Footer/>
     </Router>

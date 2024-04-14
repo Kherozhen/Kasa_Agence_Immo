@@ -1,4 +1,3 @@
-import ImageHome from "../../Images/ImageHome.png";
 
 
 function Home() {
@@ -9,9 +8,10 @@ function Home() {
       </div>
       
       <div className="locations">
-        <article>
+        <article className="locationCard">
           <h2>Titre de la location</h2>
         </article>
+       
       </div>
     
     </div>

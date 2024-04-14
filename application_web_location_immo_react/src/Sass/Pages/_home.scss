@@ -1,0 +1,43 @@
+.home {
+  margin-top : 50px;
+
+  .banner h1 {
+    color: white;
+    font-size: 48px;
+    font-weight: 700;
+    background-image: url('../../Images/ImageHome.png');
+    background-size: cover;
+    background-position: center;
+    height: 223px;
+    text-align: center;
+    align-content: center;
+    border-radius: 20px;
+  }
+    
+  .locations {
+    background-color: #F6F6F6;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 40px;
+    margin-top: 30px;
+  
+    article {
+      //cursor: pointer;
+      background-color: rgba(255, 96, 96, 1);
+      border-radius: 20px;
+      padding: 20px;
+    }
+    
+    h2 {
+      color: white;
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+}
+  
+
+  
+  
