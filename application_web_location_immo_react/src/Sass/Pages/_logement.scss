@@ -1,0 +1,97 @@
+.logements {
+    margin: 20px;
+
+    .bannerLogement {
+        width: 100%;
+        height: 415px;
+        border-radius: 25px;
+      }
+
+    .titleLocation {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 30px;
+
+        .location {
+            h1 {
+                font-size: 36px;
+                font-weight: 500;
+                color: #FF6060;
+            }
+
+            h2 {
+                font-size: 18px;
+                font-weight: 500;
+            }
+        }
+
+        .owner {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .ownerText {
+                display: flex;
+                flex-direction: column;
+
+                p {
+                    color: #FF6060;
+                    font-weight: 500;
+                    margin: 0;
+                }
+            }
+
+            img {
+                width: 64px;
+                height: 64px;
+                object-fit: cover;
+                border-radius: 45%;
+            }
+        }
+    }
+      
+    .spe-rating {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        .specification {
+            display: flex;
+            gap: 10px;
+
+            p {
+                font-size: 14px;
+                font-weight: 700;
+                background-color: #FF6060;
+                color : white;
+                padding-left: 30px;
+                padding-right: 30px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                border-radius: 20px;
+            }
+        }
+
+    }
+      
+    .collapseLogement {
+        display: flex;
+        gap: 100px;
+
+        .description {
+            width: 100%;
+            font-size: 18px;
+            font-weight: 700;
+            background-color: #FF6060;
+            color: white;
+            padding-left: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px;
+        }
+    }
+}
+  
+  
+  
