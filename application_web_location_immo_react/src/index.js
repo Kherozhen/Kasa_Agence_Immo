@@ -9,6 +9,7 @@ import reportWebVitals from './reportWebVitals';
 import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
 import Logement from './Pages/Home/Logement';
+import Error from './Pages/Error/Error';
 
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
@@ -22,7 +23,8 @@ root.render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/a-propos" element={<About />} />
-        <Route path="/locationCard" element={<Logement />} />
+        <Route path="/locationCard/:id" element={<Logement />} />
+        <Route path="/error" element={<Error />} />
       </Routes>
       <Footer/>
     </Router>

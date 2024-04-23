@@ -12,18 +12,16 @@ function Home() {
       
       <div className="locations">
         {jsonData.map((item, index) => (
-          <Link to="/locationCard">
-            <article className="locationCard" key={index}>
+          <Link to={`/locationCard/${item.id}`} key={index}>
+            <article className="locationCard">
               <img src={item.cover} alt={item.title} />
               <div>
                 <h2>{item.title}</h2>
               </div>
             </article>
           </Link>
-          ))}
-       
+        ))}
       </div>
-    
     </div>
   );
 }
