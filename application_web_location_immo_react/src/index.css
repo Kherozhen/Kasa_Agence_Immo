@@ -9,7 +9,7 @@ body {
   margin: 0;
 }
 
-/* header a mettre dans un css header */
+/* header */
 header {
   display: flex;
   justify-content: space-between;
@@ -39,18 +39,26 @@ nav a:active {
   margin-top: 50px;
 }
 
+.banner {
+  position: relative;
+}
+
 .banner h1 {
   color: white;
   font-size: 48px;
   font-weight: 700;
-  background-image: url('./Images/ImageHome.png');
-  background-size: cover;
-  background-position: center;
+  position: absolute;
+  left: 25%;
+  top: 35%;
+  z-index: 1;
+}
+
+.banner img {
+  width: 100%;
   height: 223px;
-  text-align: center;
-  align-content: center;
+  object-fit: cover;
   border-radius: 20px;
-  margin: 5px;
+  filter: brightness(0.7);
 }
 
 .locations {
@@ -72,16 +80,16 @@ nav a:active {
 .locations .locationCard {
   cursor: pointer;
   height: 340px;
-  background-color: rgba(255, 96, 96, 1);
   border-radius: 20px;
+  position: relative;
 }
 
 .locations .locationCard img {
   width: 100%;
-  height: 80%;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  height: 100%;
+  border-radius: 20px;
   object-fit: cover;
+  filter: brightness(0.7);
 }
 
 .locations .locationCard h2 {
@@ -89,6 +97,9 @@ nav a:active {
   font-size: 18px;
   font-weight: 700;
   padding: 5px;
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
 }
 
 /* About */
@@ -133,17 +144,43 @@ nav a:active {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-/* Logement à mettre dans le sass logement */
+/* Logement */
 
 .logements {
   margin: 20px;
 }
 
-.bannerLogement {
+.carousel  {
+  position: relative;
+}
+
+.carousel .imgCarousel {
   width: 100%;
   height: 415px;
   border-radius: 25px;
   object-fit: cover;
+}
+
+.carousel .compteur {
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  color: white;
+  font-size: 18px;
+}
+
+.carousel .arrow button {
+	height: 100%;
+  border: none;
+	background-color: transparent;
+	cursor: pointer;
+  position: absolute;
+}
+.carousel .arrow .arrowLeft{
+	left: 0px;
+}
+.carousel .arrow .arrowRight {
+	right: 0px;
 }
 
 .titleLocation {
@@ -237,10 +274,11 @@ nav a:active {
 .collapseLogement .description p {
   font-size: 18px;
   font-weight: 400;
-  padding: 10px;
+  padding-left: 10px;
+  padding-top: 5px;
 }
 
-/* Footer a mettre dans un css footer */
+/* Footer */
 
 footer {
   background-color: black;

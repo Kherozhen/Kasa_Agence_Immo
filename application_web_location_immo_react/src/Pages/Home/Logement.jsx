@@ -1,13 +1,12 @@
 import jsonData from '../../App.json';
-import { Link } from 'react-router-dom';
+import { Link, json } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
-
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import Carousel from '../../Components/Carousel/Carousel';
 
 function Logement() {
     const { id } = useParams();
     const location = jsonData.find(loc => loc.id === id);
+
 
     if (!location) {
         return <Link to="/error" />;
@@ -16,11 +15,7 @@ function Logement() {
     return (
         <div className="logements">
             <div>
-                {location.pictures.map((picture, index) => (
-                    <div key={index}>
-                        <img className="bannerLogement" src={picture} alt={`Slide ${index + 1}`} />
-                    </div>
-                ))}
+                <Carousel img={location.pictures} /> 
             </div>
 
             <div className="titleLocation">
@@ -38,7 +33,10 @@ function Logement() {
 
             <div className="spe-rating">
                 <div className="specification">
-                    <p>{location.tags}</p>
+                    {location.tags.map((tag, index) => (
+                        <p key={index}>{tag}</p>
+                    ))}
+                    
                 </div>
                 <div className="rating">{location.rating}</div>
             </div>
@@ -50,7 +48,9 @@ function Logement() {
                 </div>
                 <div className="description">
                     <h3>Équipements</h3>
-                    <p>{location.equipments}</p>
+                    {location.equipments.map((equipment, index) => (
+                        <p key={index}>{equipment}</p>
+                    ))}
                 </div>
             </div>
         </div>

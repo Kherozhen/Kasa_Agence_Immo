@@ -1,11 +1,11 @@
+import Banner from '../../Components/Banner/Banner';
+import imgBanner from '../../Images/ImageAbout.png';
 
 
 function About() {
     return (
       <div className="about">
-        <div className="bannerAbout">
-          <h1> </h1>
-        </div>
+        <Banner img={imgBanner} />
       
         <div className="aboutCollapses">
           <div className="collapse">
