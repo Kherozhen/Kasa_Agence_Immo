@@ -1,12 +1,13 @@
 import jsonData from '../../App.json';
-import { Link, json } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
+
 import Carousel from '../../Components/Carousel/Carousel';
+import Collapse from '../../Components/Collapse/Collapse';
 
 function Logement() {
     const { id } = useParams();
     const location = jsonData.find(loc => loc.id === id);
-
 
     if (!location) {
         return <Link to="/error" />;
@@ -44,13 +45,21 @@ function Logement() {
             <div className="collapseLogement">
                 <div className="description">
                     <h3>Description</h3>
-                    <p>{location.description}</p>  
+                    <div className='descriptionText'>
+                        <Collapse>                        
+                            <p>{location.description}</p> 
+                        </Collapse>
+                    </div>    
                 </div>
                 <div className="description">
                     <h3>Équipements</h3>
-                    {location.equipments.map((equipment, index) => (
-                        <p key={index}>{equipment}</p>
-                    ))}
+                    <div className='equipementText'>
+                        <Collapse>
+                            {location.equipments.map((equipment, index) => (
+                                <p key={index}>{equipment}</p>
+                            ))}
+                        </Collapse>
+                    </div>
                 </div>
             </div>
         </div>
