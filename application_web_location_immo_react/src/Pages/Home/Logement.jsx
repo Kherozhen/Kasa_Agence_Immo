@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 
 import Carousel from '../../Components/Carousel/Carousel';
 import Collapse from '../../Components/Collapse/Collapse';
+import Rating from '../../Components/Rating/Rating';
 
 function Logement() {
     const { id } = useParams();
@@ -39,7 +40,9 @@ function Logement() {
                     ))}
                     
                 </div>
-                <div className="rating">{location.rating}</div>
+                <div className="rating">
+                    <Rating rating={location.rating} />
+                </div>
             </div>
 
             <div className="collapseLogement">

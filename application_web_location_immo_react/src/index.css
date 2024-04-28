@@ -269,6 +269,12 @@ nav a:active {
   border-radius: 20px;
 }
 
+.spe-rating .rating .ratingStars{
+  display: flex;
+  gap: 5px;
+}
+
+
 .collapseLogement {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -333,7 +339,6 @@ nav a:active {
   font-size: 36px;
   color: #FF6060;
 }
-
 
 
 /* Footer */
