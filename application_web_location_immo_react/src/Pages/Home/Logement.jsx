@@ -20,28 +20,29 @@ function Logement() {
                 <Carousel img={location.pictures} /> 
             </div>
 
-            <div className="titleLocation">
-                <div className="location">
-                    <h1>{location.title}</h1>
-                    <h2>{location.location}</h2>
-                </div>
-                <div className="owner">
-                    <div className="ownerText">
-                        <p className="name">{location.host.name}</p>
+            <div className='descriptionLocation'>
+                <div className="location-spe">
+                    <div className="location">
+                        <h1>{location.title}</h1>
+                        <h2>{location.location}</h2>
                     </div>
-                    <img src={location.host.picture} alt={location.host.name}/>
+                    <div className="specification">
+                        {location.tags.map((tag, index) => (
+                            <p key={index}>{tag}</p>
+                        ))}
+                    </div>
                 </div>
-            </div>
 
-            <div className="spe-rating">
-                <div className="specification">
-                    {location.tags.map((tag, index) => (
-                        <p key={index}>{tag}</p>
-                    ))}
-                    
-                </div>
-                <div className="rating">
-                    <Rating rating={location.rating} />
+                <div className="owner-rating">
+                    <div className="owner">
+                        <div className="ownerText">
+                            <p className="name">{location.host.name}</p>
+                        </div>
+                        <img src={location.host.picture} alt={location.host.name}/>
+                    </div>
+                    <div className="rating">
+                        <Rating rating={location.rating} />
+                    </div>
                 </div>
             </div>
 

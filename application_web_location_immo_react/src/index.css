@@ -2,19 +2,35 @@ body {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and (max-width: 768px){
+    width: 100%;
+    background-color: #F6F6F6;
+  }
 }
 
 *{
   font-family: 'Montserrat';
   margin: 0;
+
+  @media screen and (max-width: 768px){
+    max-width: 768;
+  }
 }
 
-/* header */
+/***************************** header *****************************/
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin : 20px;
+}
+
+header img {
+  @media screen and (max-width: 768px){
+    width : 148px;
+  }
 }
 
 nav {
@@ -27,20 +43,22 @@ nav a {
   font-size: 24px;
   font-weight: 500;
   color: black;
+
+  @media screen and (max-width: 768px){
+    font-size: 15px;
+  }
 }
 
-nav a:active {
+nav .active {
   text-decoration: underline;
 }
 
-/* Home */
 
-.home {
-  margin-top: 50px;
-}
+/****************************** Banner ****************************/
 
 .banner {
   position: relative;
+  padding: 15px;
 }
 
 .banner h1 {
@@ -51,6 +69,20 @@ nav a:active {
   left: 25%;
   top: 35%;
   z-index: 1;
+
+  @media screen and (max-width: 1024px){
+    font-size: 39px;
+    left: 12%;
+    top: 40%;
+    
+  }
+
+  @media screen and (max-width: 768px){
+    font-size: 24px;
+    left: 7%;
+    top: 27%;
+    width: 60%;
+  }
 }
 
 .banner img {
@@ -59,6 +91,16 @@ nav a:active {
   object-fit: cover;
   border-radius: 20px;
   filter: brightness(0.7);
+
+  @media screen and (max-width: 768px){
+    height: 111px;
+  }
+}
+
+/******************************* Home *****************************/
+
+.home {
+  margin-top: 50px;
 }
 
 .locations {
@@ -71,6 +113,15 @@ nav a:active {
   margin-top: 50px;
   margin-left: 5px;
   margin-right: 5px;
+
+  @media screen and (max-width: 768px){
+    grid-template-columns: 1fr;
+    padding-left: 15px;
+    padding-right: 15px;
+    gap: 20px;
+    margin : 0;
+    padding-top: 5px;
+  }
 }
 
 .locations a {
@@ -82,6 +133,10 @@ nav a:active {
   height: 340px;
   border-radius: 20px;
   position: relative;
+
+  @media screen and (max-width: 768px){
+    height: 255px;
+  }
 }
 
 .locations .locationCard img {
@@ -100,22 +155,14 @@ nav a:active {
   position: absolute;
   left: 5%;
   bottom: 5%;
+
+  @media screen and (max-width: 768px){
+    padding: 0px;
+    width: 80%;
+  }
 }
 
-/* About */
-.about {
-  color: white;
-  font-size: 18px;
-  font-weight: 700;
-  padding: 5px;
-}
-
-.bannerAbout{
-  height: 223px;
-  border-radius: 20px;
-  filter: brightness(0.5);
-  margin-top: 20px;
-}
+/***************************** About *****************************/
 
 .aboutCollapses {
   display: flex;
@@ -125,14 +172,19 @@ nav a:active {
   margin-top : 30px;
   margin-left: 100px;
   margin-right: 100px;
+
+  @media screen and (max-width: 768px){
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 15px;
+  }
 }
 
 .aboutCollapses .collapse {
-  background-color: #F6F6F6;
   width: 100%;
   position: relative;
   border-radius: 10px;
-  
+  background-color: #F6F6F6;
 }
 
 .aboutCollapses .collapse .buttonCollapse {
@@ -143,6 +195,10 @@ nav a:active {
   background-color: transparent;
   color: white;
   font-size: 24px;
+
+  @media screen and (max-width: 768px){
+    top: 5px;
+  }
 }
 
 .aboutCollapses .collapse h2 {
@@ -154,6 +210,10 @@ nav a:active {
   padding-bottom: 10px;
   background-color: rgba(255, 96, 96, 1);
   border-radius: 10px;
+
+  @media screen and (max-width: 768px){
+    font-size: 13px;
+  }
 }
 
 .aboutCollapses .collapse p {
@@ -163,13 +223,12 @@ nav a:active {
   font-size: 18px;
   color: black;
 
+  @media screen and (max-width: 768px){
+    font-size: 12px;
+  }
 }
 
-/* Logement */
-
-.logements {
-  margin: 20px;
-}
+ /***************************** Carousel **************************/
 
 .carousel  {
   position: relative;
@@ -180,6 +239,10 @@ nav a:active {
   height: 415px;
   border-radius: 25px;
   object-fit: cover;
+
+  @media screen and (max-width: 768px){
+    height: 255px;
+  }
 }
 
 .carousel .compteur {
@@ -188,6 +251,10 @@ nav a:active {
   bottom: 5%;
   color: white;
   font-size: 18px;
+
+  @media screen and (max-width: 768px){
+    display: none
+  }
 }
 
 .carousel .arrow button {
@@ -197,6 +264,12 @@ nav a:active {
 	cursor: pointer;
   position: absolute;
 }
+.carousel .arrow button img {
+  @media screen and (max-width: 768px){
+    width: 20px;
+  }
+}
+
 .carousel .arrow .arrowLeft{
 	left: 0px;
 }
@@ -204,60 +277,63 @@ nav a:active {
 	right: 0px;
 }
 
-.titleLocation {
+/***************************** Logement ***************************/
+
+.logements {
+  margin: 20px;
+
+  @media screen and (max-width: 768px){
+    margin: 0;
+    padding: 15px;
+  }
+}
+
+.descriptionLocation {
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 768px){
+    flex-direction: column;
+  }
+}
+
+.location-spe {
   padding-top: 30px;
 }
 
-.titleLocation .location h1 {
+.location-spe .location h1 {
   font-size: 36px;
   font-weight: 500;
   color: #FF6060;
+  padding-bottom: 10px;
+
+  @media screen and (max-width: 768px){
+    font-size: 18px;
+  }
 }
 
-.titleLocation .location h2 {
+.location-spe .location h2 {
   font-size: 18px;
   font-weight: 500;
+  padding-bottom: 30px;
+
+  @media screen and (max-width: 768px){
+    font-size: 14px;
+    padding-bottom: 10px;
+  }
 }
 
-.titleLocation .owner {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.titleLocation .owner .ownerText {
-  display: flex;
-  flex-direction: column;
-}
-
-.titleLocation .owner .ownerText p {
-  color: #FF6060;
-  font-weight: 500;
-  margin: 0;
-}
-
-.titleLocation .owner img {
-  width: 64px;
-  height: 64px;
-  object-fit: cover;
-  border-radius: 45%;
-}
-
-.spe-rating {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.spe-rating .specification {
+.location-spe .specification {
   display: flex;
   gap: 10px;
+  padding-bottom: 30px;
+
+  @media screen and (max-width: 768px){
+    padding-bottom: 0px;
+  }
 }
 
-.spe-rating .specification p {
+.location-spe .specification p {
   font-size: 14px;
   font-weight: 700;
   background-color: #FF6060;
@@ -267,19 +343,91 @@ nav a:active {
   padding-top: 5px;
   padding-bottom: 5px;
   border-radius: 20px;
+
+  @media screen and (max-width: 768px){
+    font-size: 10px;
+  }
 }
 
-.spe-rating .rating .ratingStars{
+.owner-rating {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 768px){
+    flex-direction: row-reverse;
+  }
+}
+
+.owner-rating .owner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.owner-rating .owner .ownerText {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 768px){
+    justify-content: space-between;
+  }
+}
+
+.owner-rating .owner .ownerText .name {
+  color: #FF6060;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+
+  @media screen and (max-width: 768px){
+    font-size: 12px;
+  }
+}
+
+.owner-rating .owner img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 45%;
+
+  @media screen and (max-width: 768px){
+    height: 32px;
+    width: 32px;
+  }
+}
+
+.owner-rating {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding-top: 30px;
+    @media screen and (max-width: 768px){
+      padding-top: 10px;
+      justify-content: space-between;
+  }
+}
+
+.owner-rating .rating .ratingStars {
   display: flex;
   gap: 5px;
 }
 
+.owner-rating .rating .ratingStars img {
+  @media screen and (max-width: 768px){
+    width: 18px;
+  }
+}
 
 .collapseLogement {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
   
+  @media screen and (max-width: 768px){
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-top: 20px;
+  }
 }
 
 .collapseLogement .description {
@@ -296,6 +444,10 @@ nav a:active {
   color : white;
   border-radius: 10px;
   padding: 10px;
+
+  @media screen and (max-width: 768px){
+    font-size: 13px;
+  }
 }
 
 .collapseLogement .description .buttonCollapse {
@@ -306,6 +458,11 @@ nav a:active {
   background-color: transparent;
   color: white;
   font-size: 24px;
+
+  @media screen and (max-width: 768px){
+    font-size: 20px;
+    top: 7px;
+  }
 }
 
 .collapseLogement .description .descriptionText p {
@@ -322,7 +479,7 @@ nav a:active {
   padding-top: 10px;
 }
 
-/* Error */
+/*************************** Error *******************************/
 
 .pageError {
   display: flex;
@@ -341,7 +498,7 @@ nav a:active {
 }
 
 
-/* Footer */
+/**************************** Footer *****************************/
 
 footer {
   background-color: black;
@@ -355,4 +512,8 @@ footer p {
   color : white;
   font-size: 24px;
   padding-bottom: 30px;
+
+  @media screen and (max-width: 768px){
+    font-size: 12px;
+  }
 }
