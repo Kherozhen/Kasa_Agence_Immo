@@ -48,20 +48,20 @@ function Logement() {
 
             <div className="collapseLogement">
                 <div className="description">
-                    <h3>Description</h3>
                     <div className='descriptionText'>
-                        <Collapse>                        
-                            <p>{location.description}</p> 
+                        <Collapse 
+                            title="Description" 
+                            children={location.description}>                         
                         </Collapse>
                     </div>    
                 </div>
                 <div className="description">
-                    <h3>Équipements</h3>
                     <div className='equipementText'>
-                        <Collapse>
-                            {location.equipments.map((equipment, index) => (
-                                <p key={index}>{equipment}</p>
-                            ))}
+                        <Collapse 
+                            title="Équipements" 
+                            children={location.equipments.map((equipment, index) => (
+                            <span key={index}>{equipment}</span>
+                            ))}> 
                         </Collapse>
                     </div>
                 </div>

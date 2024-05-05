@@ -17,11 +17,13 @@ function Carousel (props) {
         setCurrentIndex((prevIndex) => (prevIndex === 0 ? imgCarousel.length - 1 : prevIndex - 1));
     }
 
+    const manyImg = imgCarousel.length > 1;
     
 
     return (
         <div className='carousel'>
-            <div className="arrow">
+            {manyImg && (
+                <div className="arrow">
                 <button className='arrowLeft' onClick={prev}>
                     <img  src={arrowLeft} alt="Fleche précédent"/>
                 </button>
@@ -29,9 +31,11 @@ function Carousel (props) {
                     <img  src={arrowRight} alt="Fleche suivant"/>
                 </button>
             </div>
+            )}
+            
             <div>
                 <img className='imgCarousel' src={imgCarousel[currentIndex]} alt="" />
-                <p className='compteur'> {currentIndex + 1} / {imgCarousel.length}</p>
+                {manyImg && <p className='compteur'> {currentIndex + 1} / {imgCarousel.length}</p>}
             </div>
         </div>
     )

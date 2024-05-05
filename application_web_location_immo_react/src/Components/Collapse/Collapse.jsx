@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa';
 
-function Collapse ({ title, children}) {
+function Collapse ({ title, children }) {
     
     const [isCollapsed, setIsCollapsed] = useState(true);
 
@@ -9,13 +9,13 @@ function Collapse ({ title, children}) {
         setIsCollapsed(!isCollapsed);
     };
     
-
     return (
-        <div>
-            <button className="buttonCollapse" onClick={collapseOpen}>
-                {title} {isCollapsed ? <FaAngleUp /> : <FaAngleDown />}
+        <div className="collapse">
+            <h2>{title}</h2>
+            <button onClick={collapseOpen}>
+                {isCollapsed ? <FaAngleUp  /> : <FaAngleDown  />}
             </button>
-            {!isCollapsed && <div>{children}</div>}
+            {!isCollapsed && <p>{children}</p>}
         </div>
     )
 
