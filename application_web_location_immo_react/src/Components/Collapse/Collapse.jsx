@@ -10,13 +10,15 @@ function Collapse ({ title, children }) {
     };
     
     return (
-        <div className="collapse">
+        
+        <div className="collapses">
             <h2>{title}</h2>
             <button onClick={collapseOpen}>
                 {isCollapsed ? <FaAngleUp  /> : <FaAngleDown  />}
             </button>
             {!isCollapsed && <p>{children}</p>}
         </div>
+           
     )
 
 };

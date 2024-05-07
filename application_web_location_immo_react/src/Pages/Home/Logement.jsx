@@ -47,24 +47,18 @@ function Logement() {
             </div>
 
             <div className="collapseLogement">
-                <div className="description">
-                    <div className='descriptionText'>
-                        <Collapse 
-                            title="Description" 
-                            children={location.description}>                         
-                        </Collapse>
-                    </div>    
-                </div>
-                <div className="description">
-                    <div className='equipementText'>
-                        <Collapse 
-                            title="Équipements" 
-                            children={location.equipments.map((equipment, index) => (
-                            <span key={index}>{equipment}</span>
-                            ))}> 
-                        </Collapse>
-                    </div>
-                </div>
+                <Collapse 
+                    title="Description" 
+                    children={location.description}>                         
+                </Collapse>
+
+                <Collapse 
+                    title="Équipements" 
+                    children={location.equipments.map((equipment, index) => (
+                    <span key={index}>{equipment}</span>
+                    ))}> 
+                </Collapse>
+
             </div>
         </div>
     )
