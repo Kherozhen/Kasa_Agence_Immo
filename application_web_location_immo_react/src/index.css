@@ -259,7 +259,7 @@ nav .active {
 
 .owner-rating .owner .ownerText {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
 }
 
 .owner-rating .owner .ownerText .name {
@@ -267,6 +267,7 @@ nav .active {
   font-size: 18px;
   font-weight: 500;
   margin: 0;
+  width: 40%;
 }
 
 .owner-rating .owner img {
@@ -518,14 +519,13 @@ footer p {
 
   .location-spe .specification p {
     font-size: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
   }
 
   .owner-rating {
     flex-direction: row-reverse;
-  }
-
-  .owner-rating .owner .ownerText {
-    justify-content: space-between;
   }
 
   .owner-rating .owner .ownerText .name {
