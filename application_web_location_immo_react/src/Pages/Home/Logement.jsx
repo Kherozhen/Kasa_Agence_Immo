@@ -1,5 +1,5 @@
 import jsonData from '../../App.json';
-import { Link } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 
 import Carousel from '../../Components/Carousel/Carousel';
@@ -8,10 +8,11 @@ import Rating from '../../Components/Rating/Rating';
 
 function Logement() {
     const { id } = useParams();
+
     const location = jsonData.find(loc => loc.id === id);
 
     if (!location) {
-        return <Link to="/error" />;
+        return <Navigate to="/error" />;
     }
 
     return (
